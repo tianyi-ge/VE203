@@ -1,0 +1,64 @@
+% !TEX program = pdflatex
+\documentclass{beamer}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{mathrsfs}
+\newcommand{\e}[1]{\times10^{#1}}
+\newcommand{\degree}{^\circ}
+\newcommand{\spl}[1]{\[\begin{split}{#1}\end{split}\]}
+\newcommand{\enum}[1]{\begin{enumerate}{#1}\end{enumerate}}
+\newcommand{\dd}{\text{d}}
+\newcommand{\LA}{\Leftarrow}
+\newcommand{\RA}{\Rightarrow} 
+\newcommand{\LR}{\Leftrightarrow}
+\newcommand{\m}{\backslash}
+\newcommand{\ggp}[1]{\left<{#1}\right>} 
+\newcommand{\outline}{\begin{frame}{Outline}\tableofcontents[currentsubsection]\end{frame}}
+\newcommand{\mypause}{\ifpre\pause\fi}
+
+\usetheme{CambridgeUS}
+\usecolortheme{dolphin}
+
+\tikzstyle{every node}=[circle, draw, fill=blue!50,
+inner sep=0pt, minimum width=4pt]
+
+\setbeamertemplate{sidebar right}
+{
+  \vfill%
+  \llap{\insertlogo\hskip0.1cm}%
+  \vskip2pt%
+  %\llap{\href{http://tex.stackexchange.com/}{See github: Paraphrase to Zach's "Easy" Derivation}\hskip0.2cm}% NEW
+  \vskip3pt% NEW
+  \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+  \vskip2pt
+}
+
+\newif\ifpre
+\prefalse
+
+\begin{document}
+
+\title{VE203 Mid 1 Logic and Sets}
+\institute[FA2018 VE203]{}
+\author{Tianyi Ge}
+\date{Fall 2018}
+\maketitle
+
+\input{../weeks/mid1_logic&sets}
+
+\ifpre
+\begin{frame}{The End}
+  \centering \huge
+  Thank You!
+\end{frame}
+\fi
+\end{document}
