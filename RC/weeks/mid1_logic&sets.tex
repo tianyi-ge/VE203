@@ -47,7 +47,7 @@
 
 \begin{frame}{Disjunctive Normal Form}
     \begin{itemize}
-        \item First you should know why we need DNF: to transform a truth table to a logical expression. Thus you could use the logical expression for further calculation.
+        \item First you should know \textbf{why} we need DNF: \textbf{to transform a truth table to a logic expression}. Thus you could use the logic expression for further calculation.
     \end{itemize}
     \begin{example}
         \begin{table}[H]
@@ -122,9 +122,9 @@
         \column{.8\textwidth}
         \begin{itemize}
             \item 
-            i.e. $(P_1\wedge P_2\cdots\wedge P_n)\Rightarrow C$ is a tautology. Note that it does not mean that $C$ is always true!
+            i.e. $(P_1\wedge P_2\cdots\wedge P_n)\Rightarrow C$ is a tautology. Note that it \textbf{does not} mean that $C$ is always true!
             \item
-            In addition, the only possible situation where an argument wrong is that all of the premises are true but the conclusion is wrong.
+            To disprove the validness, make all of the premises true but the conclusion wrong.
             \item
             To disprove the validness, providing a counterexample is a wiser strategy than long proofs.
         \end{itemize}
@@ -137,8 +137,8 @@
     \end{definition}
     \mypause
     \begin{itemize}
-        \item Hence, to disprove the soundness, you only need to find a false premise.
-        \item To make a valid argument sound, make all the premises true by assigning the variables properly.
+        \item Hence, to disprove the soundness, you only need to find \textbf{a false premise}.
+        \item To make a valid argument sound, make all the premises true by \textbf{assigning the variables} properly.
     \end{itemize}
 \end{frame}
 
@@ -150,11 +150,11 @@
         \item If you are creating a counterexample, do not involve other variables than $A$ in $P(A)$. For example, do not define $P(x)$ as $x>1$ and $y<1$.
         \item You cannot change the \textbf{domain of disclosure} after you define it.
     \end{itemize}
-    Some mistakes:
+    \textbf{Some mistakes:}
     \begin{example}
         Let the domain of $Q(x)$ be $x\in\mathbb{N}$. $Q(x)$ is true if $x\geq 0$. Thus $\exists x Q(x)$ is true (so far everything is fine).
         
-        $\cdots$ Then on the right hand side, let $w<0$. Thus $\exists w Q(w)$ is false (no!).
+        $\cdots$ Then on the right hand side, let $w<0$. Thus $\exists w Q(w)$ is false (\textbf{no!}).
     \end{example}
 \end{frame}
 
@@ -219,24 +219,6 @@
     \end{block}
 \end{frame}
 
-\begin{frame}{Operations on Sets}
-    \begin{definition}
-        \spl{
-            \bigcup_{k=0}^n A_k:=A_0\cup \cdots \cup A_n,\quad \bigcap_{k=0}^n A_k:=A_0\cap \cdots \cap A_n
-        }
-        More generally, if $A$ is a set and $X\subseteq \mathscr{P}(A)$,
-        \spl{
-            \bigcup X=\{x\in A|(\exists y\in X)(x\in y)\},\quad \bigcap X=\{x\in A|(\forall y\in X)(x\in y)\}
-        }
-    \end{definition}
-    \begin{itemize}
-        \item I.e., $X$ is a set of some subsets of $A$. 
-        \item $\bigcup X$ is the union of all the sets \textbf{in} $X$.
-        \item $\bigcap X$ is the intersection of all the sets \textbf{in} $X$.
-        \item $\bigcup X$ and $\bigcap X$ are both subsets of $A$.
-    \end{itemize}
-\end{frame}
-
 \begin{frame}{Cartesian Product of Sets}
     \begin{definition}
         $$A\times B:=\{(a,b)|a\in A\wedge b\in B\}$$
@@ -250,10 +232,10 @@
 \end{frame}
 
 \begin{frame}{Cartesian Product of Sets}
-    Some mistakes:
-    \begin{itemize}
-        \item Any subset of $\mathbb{N}\times \mathbb{N}$ can be written as $A\times B$ (no!)
-    \end{itemize}
+    \textbf{Some mistakes:}
+    \begin{example}
+        Any subset of $\mathbb{N}\times \mathbb{N}$ can be written as $A\times B$ (\textbf{no!})
+    \end{example}
 \end{frame}
 
 \begin{frame}{Russell's Paradox}
@@ -264,10 +246,11 @@
         If $R\in R$, then $R$ should satisfy $R\notin R$ by definition. 
         
         If $R\notin R$, then it should be put in $R$ by definition.
+
         Both of the assumptions lead to contradiction.
     \end{proof}
     \begin{itemize}
-        \item Similar proof is useful in other questions (\emph{Cantor's Theorem})
-        \item To prove something related to sets, proof by contradiction is useful. You may construct a "set" with particular constraints, and substitute this "set" back to our hypothesis.
+        \item Similar proof is useful in other questions (in \emph{Cantor's Theorem})
+        \item To prove something related to sets, you may \textbf{construct a "set"} with particular constraints, and \textbf{substitute this "set" back} to our hypothesis. Finally it leads to contradiction.
     \end{itemize}
 \end{frame}
