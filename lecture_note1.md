@@ -1,4 +1,4 @@
-# VE203 mid1 18 SUMMER
+# VE203 Lecture Note 1 (18 SUMMER)
 
 ## 1. Operations on sets
 
@@ -87,7 +87,7 @@ $(L,\preceq)$ a poset, $S\subseteq L$
 1. $(\mathbb{N},|)$, gcd(x,y) is g.l.b., lcm(x,y) is l.u.b.
 2. Linearly ordered poset $(M,\preceq)$ is a lattice
 3. If $A = \{1, 2, 3, 4\}$ and
-  $R = \{(1, 1), (2, 2), (3, 3), (4, 4), (1, 2), (2, 4), (3, 4), (1, 4)\}$, then $(A, R)$ is not a lattice because $\{2, 3\}$ has no lower bound (l.u.b. is 4).
+    $R = \{(1, 1), (2, 2), (3, 3), (4, 4), (1, 2), (2, 4), (3, 4), (1, 4)\}$, then $(A, R)$ is not a lattice because $\{2, 3\}$ has no lower bound (l.u.b. is 4).
 4. $(\mathcal{P}(A),\subseteq)$
 
 ### 4.3 Complete Lattices
@@ -200,7 +200,7 @@ $A\rightarrow A$ is an injection but not a surjection.
 > 2. $Z=\{x\in \text{ran}f|x\notin f^{-1}(x)\}\subseteq A$ 
 >      x不在$f^{-1}(x)$这个集合里的集合
 > 3. $z=f(Z)$， 如果$z\in f^{-1}(z)=Z$，那$z$就不应该在$Z$这个集合里；如果$z\notin Z$，那按照$Z$的定义，$z$应该被放进$Z$里去
->   $Z=\{\cdots,z,\cdots\}\rightarrow z$不成立
+>     $Z=\{\cdots,z,\cdots\}\rightarrow z$不成立
 
 2. $|A|<|\mathcal{P}(A)|$
 > $f=\{(x,\{x\})\in A\times\mathcal{P}(A)|x\in A\}$ is an injection + $\mathcal{P}(A)\nleq A$
@@ -243,8 +243,8 @@ Let $(L,\preceq)$ be a complete lattice. $f:(L,\preceq)\rightarrow(L,\preceq)$ i
 >1. Claim I: if $x\in X$, then $f(x)\in X$. $f(x)\preceq x\Rightarrow f(f(x))\preceq f(x)$. Then $f(x)\in X$.
 
 > 2. Claim II: f(a) is a lower bound on X.
->   $a\preceq x$, $f(a)\preceq f(x)\preceq x$.
->   既然$f(a)$是lower bound, a是g.l.b, 那么 $f(a)\preceq a$ 
+>     $a\preceq x$, $f(a)\preceq f(x)\preceq x$.
+>     既然$f(a)$是lower bound, a是g.l.b, 那么 $f(a)\preceq a$ 
 * Q：a一定在X中吗？
 * A: 在的 因为 $f(a)\preceq a$
 
@@ -261,19 +261,23 @@ If exists injections $f:A\rightarrow B$ and $g:B\rightarrow A$, then exists a bi
 #### 11.2 Proof
 We know that $(\mathcal{P}(A),\subseteq)$ is a complete lattice.
 
-Define $F: \mathcal{P}(A)\rightarrow\mathcal{P}(A)$, $$F(x)=A\backslash g"(B\backslash f"X)$$
+Define $F: \mathcal{P}(A)\rightarrow\mathcal{P}(A)​$, $$F(X)=A\backslash g"(B\backslash f"X)​$$
 Step 1. 证明F是O-P function
 > Let $Y\subseteq Z\subseteq A$, then $$f"Y\subseteq f"Z$$ and $$B\backslash f"Z\subseteq B\backslash f"Y$$ and $$g"(B\backslash f"Z)\subseteq g"(B\backslash f"Y)$$ then $$F(Y)\subseteq F(Z)$$
 
 Step 2. T-K Theorem，let $$F(X)=X, X\subseteq A$$
 
 Step 3. Let $C=\textbf{ran} g$. 理论上来说，这时候我们还认为C是A的子集
-$$g^{-1}:C\rightarrow B$$ is an injection （实际上已经是bijection了）and $A\backslash X\subseteq C$ ?
+$$g^{-1}:C\rightarrow B$$ is an injection （实际上已经是bijection了
+
+- $A\backslash X\subseteq C$ ?
+
+- 因为 $A\backslash X=A\backslash F(X)=g"(B\backslash f"X)$，是通过$g$映射出来的，是ran$ g$的一部分
+
 $$h=(f\upharpoonright X)\cup(g^{-1}\upharpoonright(A\backslash X))$$
 
 dom h=A （X并上A去掉X的部分）
 ran h=B （$f"X\cup B\backslash f"X$)
-h is a bijection? 定义域值域全满就行？
 
 ### 12. A flawed definition of $\mathbb{N}$
 
